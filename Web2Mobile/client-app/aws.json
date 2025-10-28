@@ -1,0 +1,59 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify-cli/0.1.0",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "eu-west-1_u2tGwZF4Q",
+                        "AppClientId": "2tg2063amg3ov5ccn9ma2pfp76",
+                        "Region": "eu-west-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "OAuth": {
+                            "WebDomain": "translink-domain-e523e8c273a79dcc.auth.eu-west-1.amazoncognito.com",
+                            "AppClientId": "2tg2063amg3ov5ccn9ma2pfp76",
+                            "SignInRedirectURI": "https://localhost:3000/callback",
+                            "SignOutRedirectURI": "https://localhost:3000/signout",
+                            "Scopes": [
+                                "email",
+                                "openid"
+                            ]
+                        },
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "socialProviders": [],
+                        "usernameAttributes": [
+                            "EMAIL"
+                        ],
+                        "signupAttributes": [
+                            "PHONE_NUMBER",
+                            "EMAIL",
+                            "NAME"
+                        ],
+                        "passwordProtectionSettings": {
+                            "passwordPolicyMinLength": 8,
+                            "passwordPolicyCharacters": [
+                                "REQUIRES_LOWERCASE",
+                                "REQUIRES_UPPERCASE",
+                                "REQUIRES_NUMBERS"
+                            ]
+                        },
+                        "mfaConfiguration": "OFF",
+                        "mfaTypes": [],
+                        "verificationMechanisms": [
+                            "EMAIL"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
